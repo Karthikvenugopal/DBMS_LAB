@@ -29,7 +29,9 @@ update supplier set sname = 'Johns' where sid = 10002;
 select * from parts;
 select * from catalog;
 update catalog set cost = 30 where sid = 10003 and pid = 20003;
-
+select supplier.sid from supplier, catalog, parts where parts.color in ("Green","Red");
+select supplier.sid from supplier, catalog, parts where parts.color = "Red" or city = "Bangalore";
+select c1.sid,c2.sid from catalog c1, catalog c2 where c1.cost>c2.cost;
 
 
 
